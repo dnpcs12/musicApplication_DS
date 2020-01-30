@@ -1,0 +1,18 @@
+﻿  uic MusicApplicationByQt.ui
+  uic QtInputWindow.ui
+  uic QtWindowSelectPlayList.ui
+  moc MusicApplicationByQt.h
+  moc QtInputWindow.h
+  moc QtWindowSelectPlayList.h
+  ItemType.cpp
+  MusicApplicationByQt.cpp
+  PlayItem.cpp
+  PlayerType.cpp
+  QtInputWindow.cpp
+  QtWindowSelectPlayList.cpp
+  QtWindow_playlist.cpp
+  main.cpp
+  moc_MusicApplicationByQt.cpp
+  moc_QtInputWindow.cpp
+  moc_QtWindowSelectPlayList.cpp
+  MusicApplicationByQt.vcxproj -> D:\User\Desktop\work\data structure\MusicApplicationByQt\x64\Release\MusicApplicationByQt.exe

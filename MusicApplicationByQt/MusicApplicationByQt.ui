@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MusicApplicationByQtClass</class>
+ <widget class="QMainWindow" name="MusicApplicationByQtClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1229</width>
+    <height>742</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MusicApplicationByQt</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>781</width>
+      <height>621</height>
+     </rect>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhNoEditMenu</set>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+    <widget class="QWidget" name="song">
+     <attribute name="title">
+      <string>노래</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>761</width>
+        <height>571</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>모든 곡</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <widget class="QPushButton" name="AddMusic">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>520</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Add</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>520</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Open File</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>520</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+      <widget class="QTableWidget" name="MusicList">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>741</width>
+         <height>481</height>
+        </rect>
+       </property>
+       <column>
+        <property name="text">
+         <string>고유번호</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>제목</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>가수</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>작곡가</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>장르</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>재생횟수</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="geometry">
+        <rect>
+         <x>640</x>
+         <y>520</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>모든 곡 삭제</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="playlist_tab">
+     <attribute name="title">
+      <string>재생목록</string>
+     </attribute>
+     <widget class="QListWidget" name="QMasterPlayList">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>221</width>
+        <height>531</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="inPlayList">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>10</y>
+        <width>511</width>
+        <height>531</height>
+       </rect>
+      </property>
+      <column>
+       <property name="text">
+        <string>고유번호</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>제목</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>가수</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>재생횟수</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="PL_DeleteButton">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>550</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>재생목록 삭제</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="PL_AddButton">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>550</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>새 재생목록 생성</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Search">
+     <attribute name="title">
+      <string>검색</string>
+     </attribute>
+     <widget class="QLineEdit" name="searchBox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>371</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="searchRange">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>30</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>통합검색</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>고유번호</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>제목</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>가수</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>장르</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>30</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>검색</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="searchResult">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>731</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <column>
+       <property name="text">
+        <string>고유번호</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>제목</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>가수</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>작곡가</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>장르</string>
+       </property>
+      </column>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="debuglable">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>630</y>
+      <width>331</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>10</y>
+      <width>421</width>
+      <height>661</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HY나무M</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>재생 중인 곡이 없습니다</string>
+    </property>
+    <widget class="QLabel" name="pic_music">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>30</y>
+       <width>311</width>
+       <height>261</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="MusicApplicationByQt.qrc">:/image/music.png</pixmap>
+     </property>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>310</y>
+       <width>401</width>
+       <height>261</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <property name="leftMargin">
+       <number>6</number>
+      </property>
+      <property name="rightMargin">
+       <number>5</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="curMusicTitle">
+        <property name="font">
+         <font>
+          <family>HY나무M</family>
+          <pointsize>11</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>제목</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="curMusicArtist">
+        <property name="font">
+         <font>
+          <family>HY나무M</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>가수</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextBrowser" name="curMusiclyric">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'HY나무M'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Gulim';&quot;&gt;가사&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Gulim';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="NextButton">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>580</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="PreButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>580</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="isRandomCheck">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>640</y>
+       <width>96</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>랜덤 재생</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="curLoop">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>640</y>
+       <width>131</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>반복재생(현재)</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="totalLoop">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>620</y>
+       <width>121</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>반복재생(전체)</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="NoLoop">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>640</y>
+       <width>108</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>반복X</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1229</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MusicApplicationByQt.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>AddMusic</sender>
+   <signal>clicked()</signal>
+   <receiver>MusicApplicationByQtClass</receiver>
+   <slot>getMusicInfo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>644</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>589</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MusicApplicationByQtClass</receiver>
+   <slot>OpenTextFile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>232</x>
+     <y>644</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>589</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MusicApplicationByQtClass</receiver>
+   <slot>WriteTextFile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>332</x>
+     <y>644</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>589</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MusicList</sender>
+   <signal>cellClicked(int,int)</signal>
+   <receiver>MusicList</receiver>
+   <slot>selectRow(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>476</x>
+     <y>118</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>512</x>
+     <y>141</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>PL_AddButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MusicApplicationByQtClass</receiver>
+   <slot>openPlaylistAddWindow()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>92</x>
+     <y>641</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>589</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>PL_DeleteButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MusicApplicationByQtClass</receiver>
+   <slot>DeletePlayList()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>211</x>
+     <y>633</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>589</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>QMasterPlayList</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>MusicApplicationByQtClass</receiver>
+   <slot>ShowInPlayList()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>187</x>
+     <y>361</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>589</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MusicList</sender>
+   <signal>cellDoubleClicked(int,int)</signal>
+   <receiver>MusicApplicationByQtClass</receiver>
+   <slot>MusicPlay()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>337</x>
+     <y>122</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>43</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>inPlayList</sender>
+   <signal>cellClicked(int,int)</signal>
+   <receiver>inPlayList</receiver>
+   <slot>selectRow(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>541</x>
+     <y>573</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>627</x>
+     <y>590</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>inPlayList</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>MusicApplicationByQtClass</receiver>
+   <slot>MusicPlayInPL()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>677</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>666</x>
+     <y>735</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>NextButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MusicApplicationByQtClass</receiver>
+   <slot>NextPlay()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1138</x>
+     <y>657</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>589</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MusicApplicationByQtClass</receiver>
+   <slot>SearchMusic()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>512</x>
+     <y>117</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>41</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>isRandomCheck</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MusicApplicationByQtClass</receiver>
+   <slot>SetIsRandom()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>856</x>
+     <y>691</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>589</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>NoLoop</sender>
+   <signal>clicked()</signal>
+   <receiver>MusicApplicationByQtClass</receiver>
+   <slot>SetLoop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>972</x>
+     <y>700</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>589</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>totalLoop</sender>
+   <signal>clicked()</signal>
+   <receiver>MusicApplicationByQtClass</receiver>
+   <slot>SetLoop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1094</x>
+     <y>681</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>589</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>curLoop</sender>
+   <signal>clicked()</signal>
+   <receiver>MusicApplicationByQtClass</receiver>
+   <slot>SetLoop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1104</x>
+     <y>702</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>589</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>PreButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MusicApplicationByQtClass</receiver>
+   <slot>PrePlay()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>823</x>
+     <y>643</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>789</x>
+     <y>713</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MusicApplicationByQtClass</receiver>
+   <slot>MakeEmpty()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>691</x>
+     <y>628</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>704</x>
+     <y>711</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>AddMusic(QStringList)</slot>
+  <slot>DeleteMusic()</slot>
+  <slot>getMusicInfo()</slot>
+  <slot>OpenTextFile()</slot>
+  <slot>WriteTextFile()</slot>
+  <slot>ChangeMusic()</slot>
+  <slot>AddPlayList()</slot>
+  <slot>openPlaylistAddWindow()</slot>
+  <slot>DeletePlayList()</slot>
+  <slot>ShowInPlayList()</slot>
+  <slot>MusicPlay()</slot>
+  <slot>MusicPlayInPL()</slot>
+  <slot>NextPlay()</slot>
+  <slot>PrePlay()</slot>
+  <slot>SearchMusic()</slot>
+  <slot>SetIsRandom()</slot>
+  <slot>SetLoop()</slot>
+  <slot>MakeEmpty()</slot>
+ </slots>
+</ui>

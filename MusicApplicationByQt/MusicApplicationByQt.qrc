@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="MusicApplicationByQt"/>
+  <qresource prefix="image">
+    <file>music.png</file>
+  </qresource>
+</RCC>
